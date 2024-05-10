@@ -58,6 +58,7 @@
  *
  * #define AWS_IOT_ENDPOINT                 "...insert here..."
  */
+ #define AWS_IOT_ENDPOINT               "a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com"
 
 /**
  * @brief AWS IoT Core server port number for HTTPS connections.
@@ -82,7 +83,7 @@
  * @note This certificate should be PEM-encoded.
  */
 #ifndef ROOT_CA_CERT_PATH
-    #define ROOT_CA_CERT_PATH    "certificates/AmazonRootCA1.crt"
+    #define ROOT_CA_CERT_PATH    "certificates/root-CA.crt"
 #endif
 
 /**
@@ -94,6 +95,7 @@
  *
  * #define CLIENT_CERT_PATH                  "...insert here..."
  */
+ #define CLIENT_CERT_PATH    "certificates/TutorialTestThing.cert.pem"
 
 /**
  * @brief Path of the file containing the client's private key for
@@ -104,6 +106,7 @@
  *
  * #define CLIENT_PRIVATE_KEY_PATH           "...insert here..."
  */
+ #define CLIENT_PRIVATE_KEY_PATH    "certificates/TutorialTestThing.private.key"
 
 /**
  * @brief This endpoint can be used to publish a message to a topic named topic
@@ -115,7 +118,7 @@
  * @note QoS=1 implies the message is delivered to all subscribers of the topic
  * at least once.
  */
-#define POST_PATH                         "/topics/topic?qos=1"
+#define POST_PATH                         "/topics/testclient/example/topic?qos=1"
 
 /**
  * @brief Transport timeout in milliseconds for transport send and receive.
