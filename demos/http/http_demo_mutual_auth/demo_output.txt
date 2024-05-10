@@ -1,0 +1,63 @@
+    +----------------------------------------------------------------------+
+    ¦                 • MobaXterm Personal Edition v22.0 •                 ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? Linux distribution: ?Ubuntu                                       ¦
+    ¦ ? Windows drives are mounted into /mnt path (by default)             ¦
+    ¦ ? WSL DISPLAY is automatically redirected to Windows desktop         ¦
+    ¦ ? WSL filesystem is accessible in the sidebar browser                ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+kongwah@DESKTOP-HUPMFGC:~$ cd aws-iot-device-sdk-embedded-C/
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C$ cd build/
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build$ make http_demo_mutual_auth
+[  0%] Built target sockets_posix
+[  0%] Built target openssl_posix
+[ 33%] Built target clock_posix
+[ 33%] Building C object demos/http/http_demo_mutual_auth/CMakeFiles/http_demo_mutual_auth.dir/http_demo_mutual_auth.c.o
+[ 33%] Building C object demos/http/http_demo_mutual_auth/CMakeFiles/http_demo_mutual_auth.dir/__/common/src/http_demo_url_utils.c.o
+[ 66%] Building C object demos/http/http_demo_mutual_auth/CMakeFiles/http_demo_mutual_auth.dir/__/common/src/http_demo_utils.c.o
+[ 66%] Building C object demos/http/http_demo_mutual_auth/CMakeFiles/http_demo_mutual_auth.dir/__/__/__/libraries/standard/coreHTTP/source/core_http_client.c.o
+[ 66%] Building C object demos/http/http_demo_mutual_auth/CMakeFiles/http_demo_mutual_auth.dir/__/__/__/libraries/standard/coreHTTP/source/dependency/3rdparty/llhttp/src/api.c.o
+[ 66%] Building C object demos/http/http_demo_mutual_auth/CMakeFiles/http_demo_mutual_auth.dir/__/__/__/libraries/standard/coreHTTP/source/dependency/3rdparty/llhttp/src/llhttp.c.o
+[ 66%] Building C object demos/http/http_demo_mutual_auth/CMakeFiles/http_demo_mutual_auth.dir/__/__/__/libraries/standard/coreHTTP/source/dependency/3rdparty/llhttp/src/http.c.o
+[100%] Building C object demos/http/http_demo_mutual_auth/CMakeFiles/http_demo_mutual_auth.dir/__/__/__/libraries/standard/backoffAlgorithm/source/backoff_algorithm.c.o
+[100%] Linking C executable ../../../bin/http_demo_mutual_auth
+[100%] Built target http_demo_mutual_auth
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build$ cd bin
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build/bin$ ./http_demo_mutual_auth
+[INFO] [DEMO] [http_demo_mutual_auth.c:360] Performing TLS handshake on top of the TCP connection.
+[INFO] [DEMO] [http_demo_mutual_auth.c:192] Establishing a TLS session to a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com:443.
+[INFO] [DEMO] [http_demo_mutual_auth.c:270] Sending HTTP POST request to a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com/topics/testclient/example/topic?qos=1...
+[INFO] [DEMO] [http_demo_mutual_auth.c:296] Received HTTP response from a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com/topics/testclient/example/topic?qos=1...
+Response Headers:
+content-type: application/json
+content-length: 65
+date: Fri, 10 May 2024 07:58:13 GMT
+x-amzn-RequestId: 26339d57-79d3-cf5b-426f-8ed0b3fb4501
+connection: keep-alive
+Response Status:
+200
+Response Body:
+{"message":"OK","traceId":"26339d57-79d3-cf5b-426f-8ed0b3fb4501"}
+
+[INFO] [DEMO] [http_demo_mutual_auth.c:403] Demo completed successfully.
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build/bin$ ./http_demo_mutual_auth
+[INFO] [DEMO] [http_demo_mutual_auth.c:360] Performing TLS handshake on top of the TCP connection.
+[INFO] [DEMO] [http_demo_mutual_auth.c:192] Establishing a TLS session to a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com:443.
+[INFO] [DEMO] [http_demo_mutual_auth.c:270] Sending HTTP POST request to a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com/topics/testclient/example/topic?qos=1...
+[INFO] [DEMO] [http_demo_mutual_auth.c:296] Received HTTP response from a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com/topics/testclient/example/topic?qos=1...
+Response Headers:
+content-type: application/json
+content-length: 65
+date: Fri, 10 May 2024 07:59:46 GMT
+x-amzn-RequestId: 90bfb1f2-d60c-64f4-79ee-4e073482c62a
+connection: keep-alive
+Response Status:
+200
+Response Body:
+{"message":"OK","traceId":"90bfb1f2-d60c-64f4-79ee-4e073482c62a"}
+
+[INFO] [DEMO] [http_demo_mutual_auth.c:403] Demo completed successfully.
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build/bin$

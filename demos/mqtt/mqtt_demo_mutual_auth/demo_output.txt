@@ -1,0 +1,167 @@
+    +----------------------------------------------------------------------+
+    ¦                 • MobaXterm Personal Edition v22.0 •                 ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? Linux distribution: ?Ubuntu                                       ¦
+    ¦ ? Windows drives are mounted into /mnt path (by default)             ¦
+    ¦ ? WSL DISPLAY is automatically redirected to Windows desktop         ¦
+    ¦ ? WSL filesystem is accessible in the sidebar browser                ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+kongwah@DESKTOP-HUPMFGC:~$ cd aws-iot-device-sdk-embedded-C/
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C$ cd build/
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build$ make mqtt_demo_mutual_auth
+[  0%] Built target sockets_posix
+[  0%] Built target openssl_posix
+[ 50%] Built target clock_posix
+Consolidate compiler generated dependencies of target mqtt_demo_mutual_auth
+[ 50%] Building C object demos/mqtt/mqtt_demo_mutual_auth/CMakeFiles/mqtt_demo_mutual_auth.dir/mqtt_demo_mutual_auth.c.o
+[ 50%] Linking C executable ../../../bin/mqtt_demo_mutual_auth
+[100%] Built target mqtt_demo_mutual_auth
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build$ cd bin
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build/bin$ ./mqtt_demo_mutual_auth
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:695] Establishing a TLS session to a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com:8883.
+[INFO] [MQTT] [core_mqtt.c:2740] MQTT connection established with the broker.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1206] MQTT connection successfully established with broker.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1715] A clean MQTT connection is established. Cleaning up all the stored outgoing publishes.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1449] Subscribing to the MQTT topic testclient/example/topic.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1268] SUBSCRIBE sent for topic testclient/example/topic to broker.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1066] Subscribed to the topic testclient/example/topic. with maximum QoS 1.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1488] Sending Publish to the MQTT topic testclient/example/topic.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1365] PUBLISH sent for topic testclient/example/topic to broker with packet ID 2.
+
+
+[INFO] [MQTT] [core_mqtt.c:1539] Ack packet deserialized with result: MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1556] State record updated. New state=MQTTPublishDone.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1099] PUBACK received for packet id 2.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:809] Cleaned up outgoing publish packet with packet id 2.
+
+
+[INFO] [MQTT] [core_mqtt.c:1407] De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1435] State record updated. New state=MQTTPubAckSend.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:899] Incoming QOS : 1.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:907] Incoming Publish Topic Name: testclient/example/topic matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : Hello World!.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1511] Delay before continuing to next iteration.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1488] Sending Publish to the MQTT topic testclient/example/topic.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1365] PUBLISH sent for topic testclient/example/topic to broker with packet ID 3.
+
+
+[INFO] [MQTT] [core_mqtt.c:1539] Ack packet deserialized with result: MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1556] State record updated. New state=MQTTPublishDone.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1099] PUBACK received for packet id 3.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:809] Cleaned up outgoing publish packet with packet id 3.
+
+
+[INFO] [MQTT] [core_mqtt.c:1407] De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1435] State record updated. New state=MQTTPubAckSend.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:899] Incoming QOS : 1.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:907] Incoming Publish Topic Name: testclient/example/topic matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : Hello World!.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1511] Delay before continuing to next iteration.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1488] Sending Publish to the MQTT topic testclient/example/topic.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1365] PUBLISH sent for topic testclient/example/topic to broker with packet ID 4.
+
+
+[INFO] [MQTT] [core_mqtt.c:1539] Ack packet deserialized with result: MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1556] State record updated. New state=MQTTPublishDone.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1099] PUBACK received for packet id 4.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:809] Cleaned up outgoing publish packet with packet id 4.
+
+
+[INFO] [MQTT] [core_mqtt.c:1407] De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1435] State record updated. New state=MQTTPubAckSend.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:899] Incoming QOS : 1.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:907] Incoming Publish Topic Name: testclient/example/topic matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : Hello World!.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1511] Delay before continuing to next iteration.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1488] Sending Publish to the MQTT topic testclient/example/topic.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1365] PUBLISH sent for topic testclient/example/topic to broker with packet ID 5.
+
+
+[INFO] [MQTT] [core_mqtt.c:1539] Ack packet deserialized with result: MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1556] State record updated. New state=MQTTPublishDone.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1099] PUBACK received for packet id 5.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:809] Cleaned up outgoing publish packet with packet id 5.
+
+
+[INFO] [MQTT] [core_mqtt.c:1407] De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1435] State record updated. New state=MQTTPubAckSend.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:899] Incoming QOS : 1.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:907] Incoming Publish Topic Name: testclient/example/topic matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : Hello World!.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1511] Delay before continuing to next iteration.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1488] Sending Publish to the MQTT topic testclient/example/topic.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1365] PUBLISH sent for topic testclient/example/topic to broker with packet ID 6.
+
+
+[INFO] [MQTT] [core_mqtt.c:1539] Ack packet deserialized with result: MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1556] State record updated. New state=MQTTPublishDone.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1099] PUBACK received for packet id 6.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:809] Cleaned up outgoing publish packet with packet id 6.
+
+
+[INFO] [MQTT] [core_mqtt.c:1407] De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.
+[INFO] [MQTT] [core_mqtt.c:1435] State record updated. New state=MQTTPubAckSend.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:899] Incoming QOS : 1.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:907] Incoming Publish Topic Name: testclient/example/topic matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : Hello World!.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1511] Delay before continuing to next iteration.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1521] Unsubscribing from the MQTT topic testclient/example/topic.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1311] UNSUBSCRIBE sent for topic testclient/example/topic to broker.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1080] Unsubscribed from the topic testclient/example/topic.
+
+
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1538] Disconnecting the MQTT connection with a2j70ysdy2sxcf-ats.iot.ap-southeast-1.amazonaws.com.
+[INFO] [MQTT] [core_mqtt.c:3103] Disconnected from the broker.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1733] Demo completed successfully.
+[INFO] [DEMO] [mqtt_demo_mutual_auth.c:1736] Short delay before starting the next iteration....
+
+^C
+kongwah@DESKTOP-HUPMFGC:~/aws-iot-device-sdk-embedded-C/build/bin$
